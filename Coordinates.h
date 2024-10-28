@@ -19,12 +19,12 @@ enum HorizontalDirection
 
 struct Coordinates
 {
-	u_int x;
-	u_int y;
+	int x;
+	int y;
 
 	Coordinates() = default;
 
-	Coordinates(const u_int& _x, const u_int& _y)
+	Coordinates(const int _x, const int _y)
 	{
 		x = _x;
 		y = _y;

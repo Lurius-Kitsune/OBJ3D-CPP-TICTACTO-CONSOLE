@@ -15,7 +15,7 @@ public:
 
 	Tile* GetTile(Coordinates _coordinates)
 	{
-		return IsOutOfRange(_coordinates) ? &tiles[_coordinates.x][_coordinates.y] : nullptr;
+		return IsOutOfRange(_coordinates) ? nullptr : &tiles[_coordinates.x][_coordinates.y];
 	}
 
 	Grid() = default;

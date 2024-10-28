@@ -29,7 +29,7 @@ int main()
     locale::global(locale("fr-FR")); // UTF8
 
 
-   Game _myGame = Game(1, "Thomas", "Margeuritte");
+   Game _myGame = Game(3, "Thomas", "Margeuritte");
 
    _myGame.LaunchGame();
 
