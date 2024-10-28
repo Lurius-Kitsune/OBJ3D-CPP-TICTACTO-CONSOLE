@@ -72,11 +72,11 @@ bool Game::IsOver(const Coordinates& _coords, bool& _isNull)
 	for (u_int _index = 0; _index < _directionsCount; _index++)
 	{
 		bool _useOpposite = false;
-		for (u_int _count = 1, _countIndex = 0; _countIndex < 2; _countIndex++)
+		for (int _count = 1, _countIndex = 1; _countIndex < 3; _countIndex++)
 		{
-			const int _factor = _count * (_useOpposite ? -1 : 1);
-			const Coordinates& _nextPos = { _coords.x + _directions[_index].x * _factor,
-											_coords.y + _directions[_index].y * _factor };
+			const int _factor = _countIndex * (_useOpposite ? -1 : 1);
+			const Coordinates& _nextPos = { _coords.x  + _directions[_index].x * _factor ,
+											_coords.y  + _directions[_index].y * _factor };
 
 			if (Tile* _tile = gameGrid->GetTile(_nextPos))
 			{
